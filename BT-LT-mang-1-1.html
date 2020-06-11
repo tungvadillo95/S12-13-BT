@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số nguyên >10</title>
+</head>
+
+<body>
+    <script>
+        var mangSo = [5, 10, 8, 12, 15, 9, 27, 1, 52, 99];
+        var check = 0;
+        for (let i = 0; i < mangSo.length; i++) {
+            if (mangSo[i] >= 10) {
+                check++;
+            }
+        }
+        document.write('Số giá trị lớn hơn 10 là: ' + check);
+    </script>
+</body>
+
+</html>

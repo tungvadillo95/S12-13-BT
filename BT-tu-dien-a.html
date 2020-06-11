@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th colspan="2">
+                <h1>Từ điển Anh-Việt</h1>
+            </th>
+        </tr>
+        <tr>
+            <th>Tiếng Anh</th>
+            <th>Tiếng Việt</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="nhap"></td>
+            <td><input type="text" id="xuat"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" onclick="tracuu()">Tra cứu</button></td>
+        </tr>
+    </table>
+    <script>
+        var tiengViet = ["xanh", "đỏ", "tím", "vàng"];
+        var tiengAnh = ["green", "red", "purple", "yellow"];
+        let check = 0;
+        function tracuu() {
+            var tiengAnh1 = document.getElementById('nhap').value;
+            for (let i = 0; i < tiengAnh.length; i++) {
+                if (tiengAnh1 === tiengAnh[i]) {
+                    document.getElementById("xuat").value = tiengViet[i];
+                    check++;
+                }
+            }
+            if (check == 0) {
+                document.getElementById("xuat").value = 'Không tìm thấy !';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

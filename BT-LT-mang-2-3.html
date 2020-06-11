@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm ký tự trong mảng</title>
+</head>
+
+<body>
+    <script>
+        var soPhanTu = +prompt('Nhập số lượng phần tử: ');
+        var phanTu;
+        var mang = [];
+        var check = 0;
+        for (let n = 0; n < soPhanTu; n++) {
+            phanTu = prompt('Nhập phần tử: ' + n);
+            mang.push(phanTu);
+        }
+        //document.write(mang+'<br>');
+        for (let i = 0; i < mang.length; i++) {
+            mang[i].toString();
+            for (j = 0; j < mang[i].length; j++) {
+                if (mang[j] != '') {
+                    check++;
+                }
+            }
+        }
+        document.write('Số ký tự trong mảng: ' + check);
+    </script>
+</body>
+
+</html>

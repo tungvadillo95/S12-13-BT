@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập/tạo và in đảo ngược phần tử</title>
+</head>
+
+<body>
+    <script>
+        var soPhanTu = +prompt('Nhập số lượng phần tử : ');
+        var giaTri;
+        var mang = [];
+        for (let n = 0; n < soPhanTu; n++) {
+            giaTri = prompt('Nhập phần tử ' + n);
+            mang.push(giaTri);
+        }
+        document.write(mang.reverse());
+    </script>
+</body>
+
+</html>

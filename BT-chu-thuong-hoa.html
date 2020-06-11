@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chữ thường sang hoa</title>
+</head>
+
+<body>
+    <script>
+        var nhapChuoi = prompt('Nhập chuỗi: ');
+        var chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+        var ketQua = [];
+
+        for (var x = 0; x < nhapChuoi.length; x++) {
+            if (chuHoa.indexOf(nhapChuoi[x]) !== -1) {
+                ketQua.push(nhapChuoi[x].toLowerCase());
+            }
+            else if (chuThuong.indexOf(nhapChuoi[x]) !== -1) {
+                ketQua.push(nhapChuoi[x].toUpperCase());
+            }
+            else {
+                ketQua.push(nhapChuoi[x]);
+            }
+        }
+        console.log(ketQua.join(''));
+        document.write(ketQua.join(''));
+    </script>
+</body>
+
+</html>

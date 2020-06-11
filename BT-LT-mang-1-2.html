@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần tử lớn nhất và vị trí</title>
+</head>
+
+<body>
+    <script>
+        var mangSo = [5, 10, 8, 12, 15, 9, 27, 1, 52, 99];
+        var max = mangSo[0];
+        let viTri = 0;
+        for (let i = 1; i < mangSo.length; i++) {
+            if (max < mangSo[i]) {
+                max = mangSo[i];
+                viTri = i;
+            }
+        }
+        document.write('Giá trị lớn nhất là: ' + max + ' có vị trí là ' + viTri);
+    </script>
+</body>
+
+</html>

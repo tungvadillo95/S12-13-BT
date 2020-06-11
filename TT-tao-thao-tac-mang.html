@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo thao tác mảng</title>
+    <style>
+        body{padding-top: 50px;}
+    </style>
+</head>
+<body>
+    <h1>Sample Screen</h1><br>
+    <tr>
+        <td><input type="text" id="giaTri"></input></td>
+        <td></td>
+        <td><input type="button" id="ad" value="Add" onclick="getAdd()";></input></td>
+        <td></td>
+        <td><input type="button" id="dis" value="Display" onclick="getDis()";></input></td>
+    </tr>
+    <tr>
+        <div id="kq">Kết quả</div>
+    </tr>
+    <script>
+        var x=0;
+        var array = Array();
+function getAdd(){
+    array[x]=document.getElementById("giaTri").value;
+    alert('Element: '+array[x]+' Added at imdex '+x);
+    x++;
+    document.getElementById('giaTri').value='';
+}
+function getDis(){
+    let e = "<hr/>";
+    for (let i = 0; i < array.length; i++) {
+        e += "Element " + i + " = " + array[i] + "<br/>";
+    }
+    document.getElementById("kq").innerHTML = e;
+}
+    </script>
+</body>
+</html>

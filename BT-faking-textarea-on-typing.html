@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+
+<body>
+    <h1>Type anthing slowly</h1>
+    <table>
+        <div><input type="text" id="xuat" onkeydown="chay()"></div>
+    </table>
+    <script>
+        var mang = ['T', 'Ô', 'I', ' ', 'L', 'À', ' ', 'F', 'A', 'N', ' ', 'L', 'I', 'V', 'E', 'R', 'P', 'O', 'O', 'L']
+        var hienThi = [];
+        let i = 0;
+        function chay() {
+            if (i < mang.length) {
+                i++
+                document.getElementById("xuat").value = "";
+                for (let j = 0; j < i; j++) {
+                    document.getElementById("xuat").value += mang[j];
+                }
+
+
+            } else {
+                document.getElementById("xuat").value = "";
+                i = 0;
+            }
+
+            setTimeout(function () {
+                let str = document.getElementById("xuat").value;
+
+                document.getElementById("xuat").value = str.slice(0, str.length - 1);
+            }, 1)
+        }
+
+    </script>
+</body>
+
+</html>

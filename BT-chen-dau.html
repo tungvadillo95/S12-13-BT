@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chèn dấu "-"</title>
+</head>
+<body>
+    <script>
+        var nhapSo=prompt('Nhập số: ');
+        var chuoiSo=nhapSo.toString();
+        var ketQua=[chuoiSo[0]];
+        for(let x=1; x<chuoiSo.length;x++){
+            if((chuoiSo[x-1]%2===0)&&(chuoiSo[x]%2===0)){
+                ketQua.push('-',chuoiSo[x]);
+            }
+            else ketQua.push(chuoiSo[x]);
+        }
+        document.write(ketQua.join(''));
+        console.log(ketQua.join(''));
+    </script>
+</body>
+</html>

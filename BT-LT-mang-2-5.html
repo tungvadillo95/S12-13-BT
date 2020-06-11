@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hai chuỗi giống nhau</title>
+</head>
+
+<body>
+    <script>
+        var chuoiA = prompt('Nhập chuỗi A: ')
+        var chuoiB = prompt('Nhập chuỗi B: ')
+        var check;
+        if (chuoiA.length == chuoiB.length) {
+            for (let i = 0; i < chuoiA.length; i++) {
+                if ((chuoiA[i] != chuoiB[i])) {
+                    alert('Hai chuỗi không bằng nhau!');
+                    break;
+                }
+                alert('Hai chuỗi bằng nhau!');
+            }
+        }
+        else alert('Hai chuỗi không bằng nhau!');
+        document.write('Chuỗi A là: ' + chuoiA + '<br>');
+        document.write('Chuỗi B là: ' + chuoiB);
+
+    </script>
+</body>
+
+</html>

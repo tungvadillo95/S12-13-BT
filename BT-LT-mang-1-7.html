@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập/tạo V + mảng-kiểm tra-xóa V</title>
+</head>
+
+<body>
+    <script>
+        var giaTri;
+        var mangSo = [];
+        for (let n = 0; n < 10; n++) {
+            giaTri = +prompt('Nhập giá trị phần tử ' + n);
+            mangSo.push(giaTri);
+        }
+        console.log(mangSo);
+        var soV = +prompt('Nhập số nguyên V: ');
+        var check = 0;
+        //document.write(mangSo + '<br>');
+        for (let i = 0; i < 10; i++) {
+            if (soV == mangSo[i]) {
+                mangSo.splice(i, 1);
+                mangSo.push(0);
+                check++;
+            }
+        }
+        if (check == 0) {
+            document.write('Phần tử V = ' + soV + ' không trong mảng !');
+        }
+        document.write(mangSo);
+    </script>
+</body>
+
+</html>

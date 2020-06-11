@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng C + Mảng A + Mảng B</title>
+</head>
+
+<body>
+    <script>
+        var giaTri;
+        var mangSoA = [];
+        let n;
+        for (n = 0; n < 10; n++) {
+            giaTri = +prompt('Nhập giá trị phần tử mảng A: ');
+            mangSoA.push(giaTri);
+        }
+        //document.write(mangSoA + '<br>');
+        var mangSoB = [];
+        for (n = 0; n < 10; n++) {
+            giaTri = +prompt('Nhập giá trị phần tử mảng B: ');
+            mangSoB.push(giaTri);
+        }
+        //document.write(mangSoB + '<br>');
+        var mangSoC = [];
+        for (n = 0; n < 20; n++) {
+            giaTri = +prompt('Nhập giá trị phần tử mảng C: ');
+            mangSoC.push(giaTri);
+        }
+        //document.write(mangSoC + '<br>');
+        document.write(mangSoC.concat(mangSoA, mangSoB));
+    </script>
+</body>
+
+</html>
