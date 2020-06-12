@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+
+<body>
+    <h1>Type anthing slowly</h1>
+    <textarea onkeyup="onTypeText(this)" cols="30" rows="10"></textarea>
+    <script>
+        var fakeText = "TÔI LÀ FAN LIVERPOOL!"
+        function onTypeText(textarea) {
+            const length = textarea.value.length;
+            let chuoi = [];
+            if (length <= fakeText.length) {
+                for (let i = 0; i < length; i++) {
+                    chuoi.push(fakeText[i]);
+                }
+            }
+            let hienThi = chuoi.join('');
+            textarea.value = hienThi;
+        }
+    </script>
+</body>
+
+</html>

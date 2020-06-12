@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+</head>
+
+<body>
+    <h3>Tic tac toe</h3>
+    <p id="tictactoe"></p>
+    <input type="button" value="X" onclick="nhapToaDo1()">
+    <input type="button" value="O" onclick="nhapToaDo2()">
+    <br>
+    <script>
+        let b = document.getElementById('tictactoe');
+        var data = '';
+        var a = [
+            ['.', '.', '.'],
+            ['.', '.', '.'],
+            ['.', '.', '.'],
+        ];
+        data = '<br>';
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                data += a[i][j] + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+            }
+            data += '<br><br><br>';
+        }
+        document.getElementById('tictactoe').innerHTML = data;
+        function nhapToaDo1() {
+            var toaDoX = prompt("Nhập tọa độ X(hàng): ");
+            var toaDoY = prompt("Nhập tọa độ Y(cột): ");
+            data = '';
+            a[toaDoX][toaDoY] = 'X';
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    data += a[i][j] + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+                }
+                data += '<br><br><br>';
+            }
+            if ((a[0][0] == 'X') && (a[1][1] == 'X') && (a[2][2]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            if ((a[0][0] == 'X') && (a[0][1] == 'X') && (a[0][2]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            if ((a[1][0] == 'X') && (a[1][1] == 'X') && (a[1][2]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            if ((a[2][0] == 'X') && (a[2][1] == 'X') && (a[2][2]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            if ((a[0][0] == 'X') && (a[1][0] == 'X') && (a[2][0]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            if ((a[0][1] == 'X') && (a[1][1] == 'X') && (a[2][1]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            if ((a[0][2] == 'X') && (a[1][2] == 'X') && (a[2][2]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            if ((a[2][0] == 'X') && (a[1][1] == 'X') && (a[0][2]) == 'X') {
+                alert('Người đánh X thắng !');
+            }
+            document.getElementById('tictactoe').innerHTML = data;
+        }
+
+        function nhapToaDo2() {
+            var toaDoX = prompt("Nhập tọa độ X(hàng): ");
+            var toaDoY = prompt("Nhập tọa độ Y(cột): ");
+            data = '';
+            a[toaDoX][toaDoY] = 'O';
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    data += a[i][j] + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+                }
+                data += '<br><br><br>';
+            }
+            if ((a[0][0] == 'O') && (a[1][1] == 'O') && (a[2][2]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            if ((a[0][0] == 'O') && (a[0][1] == 'O') && (a[0][2]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            if ((a[1][0] == 'O') && (a[1][1] == 'O') && (a[1][2]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            if ((a[2][0] == 'O') && (a[2][1] == 'O') && (a[2][2]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            if ((a[0][0] == 'O') && (a[1][0] == 'O') && (a[2][0]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            if ((a[0][1] == 'X') && (a[1][1] == 'O') && (a[2][1]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            if ((a[0][2] == 'X') && (a[1][2] == 'O') && (a[2][2]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            if ((a[2][0] == 'X') && (a[1][1] == 'O') && (a[0][2]) == 'O') {
+                alert('Người đánh O thắng !');
+            }
+            document.getElementById('tictactoe').innerHTML = data;
+
+        }
+    </script>
+</body>
+
+</html>
