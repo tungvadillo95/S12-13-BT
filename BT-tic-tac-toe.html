@@ -33,7 +33,10 @@
             var toaDoX = prompt("Nhập tọa độ X(hàng): ");
             var toaDoY = prompt("Nhập tọa độ Y(cột): ");
             data = '';
-            a[toaDoX][toaDoY] = 'X';
+            if (a[toaDoX][toaDoY] != 'O') {
+                a[toaDoX][toaDoY] = 'X';
+            }
+            else alert('Không hợp lệ ');
             for (let i = 0; i < 3; i++) {
                 for (let j = 0; j < 3; j++) {
                     data += a[i][j] + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
@@ -71,7 +74,10 @@
             var toaDoX = prompt("Nhập tọa độ X(hàng): ");
             var toaDoY = prompt("Nhập tọa độ Y(cột): ");
             data = '';
-            a[toaDoX][toaDoY] = 'O';
+            if (a[toaDoX][toaDoY] !== 'X') {
+                a[toaDoX][toaDoY] = 'O';
+            }
+            else alert('Không hợp lệ ');
             for (let i = 0; i < 3; i++) {
                 for (let j = 0; j < 3; j++) {
                     data += a[i][j] + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
